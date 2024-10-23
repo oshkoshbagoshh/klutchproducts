@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables";
+@import "utilities";
+@import "mixins";
+
+@layer base {
+    body {
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        color: $color-black;
+        background-color: $color-snow;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold mb-4;
+    }
+
+    a {
+        @apply text-silver-lake-blue underline;
+
+        &:hover, &:focus {
+            @apply text-silver-lake-blue-dark;
+        }
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded bg-jonquil text-black transition-colors duration-300;
+
+        &:hover, &:focus {
+            @apply bg-jonquil-dark;
+        }
+    }
+
+    .container {
+        @apply w-full px-4 mx-auto;
+        @screen sm { max-width: 640px; }
+        @screen md { max-width: 768px; }
+        @screen lg { max-width: 1024px; }
+        @screen xl { max-width: 1280px; }
+    }
+}
+
+@layer utilities {
+    .visually-hidden {
+        @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+        clip: rect(0, 0, 0, 0);
+    }
+}
+
+// Custom styles that don't fit into Tailwind's utility classes
+.custom-element {
+    // Your custom styles here
+}
+
+// Responsive styles
+@screen md {
+    // Styles for medium screens and up
+}
+
+@screen lg {
+    // Styles for large screens and up
+}
+
+// Print styles
+@media print {
+    body {
+        @apply bg-white text-black;
+    }
+
+    a {
+        @apply text-black underline;
+    }
+
+    .no-print {
+        @apply hidden;
+    }
+}

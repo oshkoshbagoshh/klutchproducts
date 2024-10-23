@@ -4,7 +4,13 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-//
+
+// /****
+// * Breeeze Auths
+// *
+// */
+
+
 //Route::get('/', function () {
 //    return Inertia::render('Welcome', [
 //        'canLogin' => Route::has('login'),
@@ -25,7 +31,7 @@ use Inertia\Inertia;
 //});
 
 Route::get('/', function () {
-return (random_int(1, 10));
+//return (random_int(1, 10));
 });
 
 require __DIR__.'/auth.php';

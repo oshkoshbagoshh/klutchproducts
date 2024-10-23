@@ -12,11 +12,27 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                'jonquil': '#f1c40f',
+                'jonquil-dark': '#917508',
+                'silver-lake-blue': '#748cab',
+                'silver-lake-blue-dark': '#5a6d84',
+                'snow': '#fffbfc',
+                'melon': '#f7af9d',
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'base': ['Arial', 'sans-serif'],
+            },
+            fontSize: {
+                'base': '16px',
+            },
+            lineHeight: {
+                'base': '1.5',
             },
         },
     },
-
+    variants: {},
     plugins: [forms],
 };
+
+
