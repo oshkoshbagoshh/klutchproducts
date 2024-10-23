@@ -1,4 +1,4 @@
-<!-- Navbar.vue -->
+<!-- zzNavbar.vue -->
 <script setup>
 import {ref} from 'vue';
 import {Link} from '@inertiajs/vue3';
@@ -15,12 +15,12 @@ const toggleMenu = () => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <Link href="/" class="flex-shrink-0">
-                        <img class="h-8 w-8" src="../../../public/img/brand/klutch-products-logo.png" alt="Logo">
+                    <Link href="/public" class="flex-shrink-0">
+                        <img class="h-8 w-8" src="../../../../public/img/brand/klutch-products-logo.png" alt="Logo">
                     </Link>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <Link href="/" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Home
+                            <Link href="/public" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Home
                             </Link>
                             <Link href="/products" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">
                                 Products
@@ -80,7 +80,7 @@ const toggleMenu = () => {
 
         <div :class="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }" class="md:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <Link href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Home</Link>
+                <Link href="/public" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Home</Link>
                 <Link href="/products" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                     Products
                 </Link>
