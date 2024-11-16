@@ -55,6 +55,7 @@ Route::get('/', function () {
     return Inertia::render('ProductReview');
 });
 
+// Product Analytics Views
 Route::get(
     '/product-analytics',
     [ProductAnalyticsController::class, 'index']
