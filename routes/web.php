@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductAnalyticsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -47,10 +48,20 @@ use Inertia\Inertia;
 //
 
 
+// KLUTCH PRODUCTS PRODUCT REVIEW SITE
+
 //================== VERSION 1 ================
 Route::get('/', function () {
     return Inertia::render('ProductReview');
 });
 
+Route::get(
+    '/product-analytics',
+    [ProductAnalyticsController::class, 'index']
+)
+    ->name('product.analytics');
 
-require __DIR__.'/auth.php';
+
+// #FIN
+// ===========================================
+require __DIR__ . '/auth.php';
