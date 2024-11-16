@@ -16,6 +16,7 @@ const toggleMenu = () => {
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <Link href="/public" class="flex-shrink-0">
+<!--                        TODO: add our logo -->
                         <img class="h-8 w-8" src="../../../../public/img/brand/klutch-products-logo.png" alt="Logo">
                     </Link>
                     <div class="hidden md:block">
@@ -30,6 +31,9 @@ const toggleMenu = () => {
                             </Link>
                             <Link href="/contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">
                                 Contact
+                            </Link>
+                            <Link href="/product-analytics" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">
+                                Product Reports
                             </Link>
                         </div>
                     </div>
