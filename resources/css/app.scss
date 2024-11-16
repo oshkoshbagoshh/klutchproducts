@@ -77,10 +77,10 @@ footer {
     }
 
     a {
-        @apply text-silver-lake-blue underline;
+        @apply $text-silver-lake-blue underline;
 
         &:hover, &:focus {
-            @apply text-silver-lake-blue-dark;
+            @apply $text-silver-lake-blue-dark;
         }
     }
 }
