@@ -1,6 +1,6 @@
-<?php 
+<?php
 //TODO: change to using .env file
-// displays usesrs into an HTML table
+// displays users into an HTML table
 
 // Connection info
 $host="localhost";
@@ -28,8 +28,8 @@ if ($result->num_rows > 0) {
         echo "UserID: " . $row["UserID"].
          " - Username: " . $row["Username"].
          " - Display Name: " . $row["DisplayName"].
-         " - Email: " . $row["Email"]. 
-         "  - PasswordHash" . $row["PasswordHash"]. // TODO: actually hash this 
+         " - Email: " . $row["Email"].
+         "  - PasswordHash" . $row["PasswordHash"]. // TODO: actually hash this
          " - Registered: " . $row["Registered"].
          " - Roles: " . $row["Roles"]. "<br>";
         }
@@ -45,7 +45,7 @@ echo "<table border='1'>";
 echo "<tr><th>ID</th><th>User Login</th><th>Display Name</th><th>User Email</th><th>Pass</th><th>User Registered</th><th>Roles</th></tr>";
 
 if ( $result->num_rows > 0) {
-    // Output data of each row in table rows 
+    // Output data of each row in table rows
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . htmlspecialchars($row['UserID']) . "</td>";
