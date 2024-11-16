@@ -11,7 +11,8 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "tightenco/ziggy": "^2.0",
-        "ext-mysqli": "*"
+        "ext-mysqli": "*",
+        "stripe/stripe-php": "@stable"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -24,7 +25,8 @@
         "pestphp/pest": "^3.5",
         "pestphp/pest-plugin-laravel": "^3.0",
         "barryvdh/laravel-debugbar": "@stable",
-        "larastan/larastan": "@stable"
+        "larastan/larastan": "@stable",
+        "squizlabs/php_codesniffer": "^3.8"
     },
     "autoload": {
         "psr-4": {
