@@ -1,9 +1,11 @@
 <!-- resources/js/Layouts/MainLayout.vue -->
 <script setup>
 import { Link } from '@inertiajs/vue3';
+import Footer from "@/Components/Footer.vue";
 </script>
 
 <template>
+<!--    MAKE it's own header / top -->
   <div class="min-h-screen flex flex-col">
     <header class="bg-gray-800 text-white p-4">
       <div class="container mx-auto flex justify-between items-center">
@@ -19,8 +21,9 @@ import { Link } from '@inertiajs/vue3';
       <slot></slot>
     </main>
 
-    <footer class="bg-gray-800 text-white p-4 text-center">
-      <p>&copy; {{ new Date().getFullYear() }} Product Review Site. All rights reserved.</p>
-    </footer>
+<!--    <footer class="bg-gray-800 text-white p-4 text-center">-->
+<!--      <p>&copy; {{ new Date().getFullYear() }} ProductSeeder Review Site. All rights reserved.</p>-->
+<!--     </footer>-->
+      <Footer />
   </div>
 </template>

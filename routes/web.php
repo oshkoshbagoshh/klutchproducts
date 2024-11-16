@@ -55,7 +55,7 @@ Route::get('/', function () {
     return Inertia::render('ProductReview');
 });
 
-// Product Analytics Views
+// ProductSeeder Analytics Views
 Route::get(
     '/product-analytics',
     [ProductAnalyticsController::class, 'index']
