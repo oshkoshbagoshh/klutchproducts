@@ -1,29 +1,47 @@
 <?php
+// app/Models/Product.php
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- *
- */
 class Product extends Model
 {
-    // Products list from Amazon products spreadsheet
-    /**
-     * @var string[]
-     */
+    use HasFactory;
+
     protected $fillable = [
-        'asin', 'category_id', 'title', 'price', 'original_price',
-        'sale_price', 'cost', 'profit', 'profit_margin', 'rating',
-        'review_count', 'sales_rank', 'total_revenue'
+        'asin',
+        'title',
+        'brand',
+        'price',
+        'sale_price',
+        'original_price',
+        'cost',
+        'profit',
+        'profit_margin',
+        'rating',
+        'review_count',
+        'category_id',
+        'total_revenue',
+        'sales_rank',
+        'fba',
+        'url',
+        'description'
     ];
 
-    /**
-     * @return BelongsTo
-     */
-    public function category(): BelongsTo
+    protected $casts = [
+        'price' => 'decimal:2',
+        'sale_price' => 'decimal:2',
+        'original_price' => 'decimal:2',
+        'cost' => 'decimal:2',
+        'profit' => 'decimal:2',
+        'profit_margin' => 'decimal:2',
+        'rating' => 'decimal:1',
+        'fba' => 'boolean',
+    ];
+
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
