@@ -1,4 +1,4 @@
-<!-- zzNavbar.vue -->
+<!-- Navbar.vue -->
 <script setup>
 import {ref} from 'vue';
 import {Link} from '@inertiajs/vue3';
@@ -17,7 +17,7 @@ const toggleMenu = () => {
                 <div class="flex items-center">
                     <Link href="/public" class="flex-shrink-0">
 <!--                        TODO: add our logo -->
-                        <img class="h-8 w-8" src="../../../../public/img/brand/klutch-products-logo.png" alt="Logo">
+                        <img class="h-8 w-8" src="../../../public/img/brand/klutch-products-logo.png" alt="Logo">
                     </Link>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">

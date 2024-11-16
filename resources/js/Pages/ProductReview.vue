@@ -6,7 +6,7 @@ import Layout from '@/Layouts/MainLayout.vue';
 import SearchBar from '@/Components/SearchBar.vue';
 import Sidebar from '@/Components/Sidebar.vue';
 import ProductGrid from '@/Components/ProductGrid.vue';
-import zzNavbar from '@/Components/zzDeprecated/zzNavbar.vue';
+import Navbar from '@/Components/Navbar.vue';
 
 // change this to get from database
 const products = ref([
@@ -24,9 +24,9 @@ const categories = ref(['Electronics', 'Books', 'Clothing', 'Home & Garden']);
     <Head title="Product Review Site" />
 
     <Layout>
-        <zzNavbar>
+        <Navbar>
 
-        </zzNavbar>
+        </Navbar>
 
         <div class="main-content">
             <SearchBar />
