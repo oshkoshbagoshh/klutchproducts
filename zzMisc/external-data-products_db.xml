@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<data>
-  <object-set>
-    <root path="">
-      <view name="virtual_view_name" query="SELECT * FROM products;"/>
-    </root>
-  </object-set>
-</data>

@@ -1,6 +1,6 @@
 <script setup>
 import { Head } from "@inertiajs/vue3";
-import Navbar2 from "@/Components/AJ/Navbar2";
+import Navbar from "@/Components/Navbar.vue";
 
 defineProps({
     canLogin: {
@@ -22,7 +22,7 @@ function handleImageError() {
 <template>
     <Head title="Welcome - " />
     <!--  NAVBAR -->
-    <Navbar2 />
+    <Navbar />
 
     <!-- Dummy Content   -->
     <div class="container">

@@ -2,9 +2,16 @@
 
 use App\Http\Controllers\ProductAnalyticsController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+// =============
+// #BOOKMAKR
+// Main Home
+Route::get('/', function () {
+    return Inertia::render('ProductReview');
+});
+
 
 // /****
 // * Breeze Auths
@@ -12,20 +19,11 @@ use Inertia\Inertia;
 // */
 
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
-
-
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-//
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -35,15 +33,17 @@ Route::middleware('auth')->group(function () {
 
 // KLUTCH PRODUCTS PRODUCT REVIEW SITE
 
-// Route group: (with prefix "products" (/reviews )
 
+// Route group: (with prefix "products" (/reviews )
+// REPORTS:
+//Route::prefix('reports',)
 //================== VERSION 1 ================
 Route::get('/products', function () {
     return Inertia::render('ProductReview');
 });
 
 // ProductSeeder Analytics Views
-// TODO: refactor to be under admin dashboard or for registered users.
+// TODO: refactor to be under admin dashboard or for registered users. (use routegroup)
 
 Route::get(
     '/product-analytics',
