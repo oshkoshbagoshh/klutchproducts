@@ -6,12 +6,23 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 // =============
-// #BOOKMAKR
+// #BOOKMARK
 // Main Home
+//TODO: Change to Home view
+
 Route::get('/', function () {
     return Inertia::render('ProductReview');
 });
 
+
+// SANDBOX
+Route::get('/MoneyForm', function () {
+    return Inertia::render('MoneyForm');
+});
+
+Route::get('/sandbox', function () {
+    return Inertia::render('Sandbox');
+});
 
 // /****
 // * Breeze Auths
@@ -38,9 +49,9 @@ Route::middleware('auth')->group(function () {
 // REPORTS:
 //Route::prefix('reports',)
 //================== VERSION 1 ================
-Route::get('/products', function () {
-    return Inertia::render('ProductReview');
-});
+//Route::get('/products', function () {
+//    return Inertia::render('ProductReview');
+//});
 
 // ProductSeeder Analytics Views
 // TODO: refactor to be under admin dashboard or for registered users. (use routegroup)
