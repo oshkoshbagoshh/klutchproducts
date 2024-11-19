@@ -1,68 +1,49 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductAnalyticsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SandboxController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// =============
-// #BOOKMARK
-// Main Home
-//TODO: Change to Home view
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
 
+// Public Routes
 Route::get('/', function () {
-    return Inertia::render('ProductReview');
-});
+    return Inertia::render('Welcome');
+})->name('home');
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
+// Authentication Routes
+require __DIR__.'/auth.php';
 
-// SANDBOX
-Route::get('/MoneyForm', function () {
-    return Inertia::render('MoneyForm');
-});
+// Protected Routes
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/sandbox', function () {
-    return Inertia::render('Sandbox');
-});
-
-// /****
-// * Breeze Auths
-// *
-// ***/
-
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-
-Route::middleware('auth')->group(function () {
+    // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Product Analytics (Admin Only)
+    Route::get('/product-analytics', [ProductAnalyticsController::class, 'index'])
+        ->name('product.analytics')
+        ->middleware('can:view-analytics');
 });
 
-
-// KLUTCH PRODUCTS PRODUCT REVIEW SITE
-
-
-// Route group: (with prefix "products" (/reviews )
-// REPORTS:
-//Route::prefix('reports',)
-//================== VERSION 1 ================
-//Route::get('/products', function () {
-//    return Inertia::render('ProductReview');
-//});
-
-// ProductSeeder Analytics Views
-// TODO: refactor to be under admin dashboard or for registered users. (use routegroup)
-
-Route::get(
-    '/product-analytics',
-    [ProductAnalyticsController::class, 'index']
-)
-    ->name('product.analytics');
-
-
-// #FIN
-// ===========================================
-require __DIR__ . '/auth.php';
+// Sandbox Routes (Development Only)
+if (app()->environment('local')) {
+    Route::prefix('sandbox')->group(function () {
+        Route::get('/', [SandboxController::class, 'index'])->name('sandbox');
+        Route::get('/money-form', [SandboxController::class, 'moneyForm'])->name('sandbox.money-form');
+    });
+}
