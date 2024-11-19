@@ -27,7 +27,7 @@ Route::get('/sandbox', function () {
 // /****
 // * Breeze Auths
 // *
-// */
+// ***/
 
 
 Route::get('/dashboard', function () {

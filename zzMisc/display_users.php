@@ -1,5 +1,5 @@
 <?php
-//TODO: change to using .env file
+// TODO: change to using .env file
 // displays users into an HTML table
 
 // Connection info
@@ -66,5 +66,3 @@ if ( $result->num_rows > 0) {
 
 // close the connection
 $conn->close();
-
-
