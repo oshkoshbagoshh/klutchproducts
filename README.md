@@ -1,3 +1,8 @@
+
+![GIF Preview](https://share.nmblc.cloud/1731986343179-screencast-localhost_8000-2024_11_18-21_18_19.webm)
+
+
+
 Thank you for providing such a comprehensive overview of the Klutch Products site build. Based on the information you've shared, it's clear that you have a well-structured plan for the project. Here are some additional thoughts and suggestions for each of the areas you mentioned:
 
 1. Accessibility / Lighthouse:
