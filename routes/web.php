@@ -21,23 +21,27 @@ Route::get('/', function () {
 })->name('home');
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
+// Add unauthorized route
+Route::get('/unauthorized', function () {
+    return Inertia::render('Unauthorized');
+})->name('unauthorized');
+
 // Authentication Routes
 require __DIR__.'/auth.php';
 
 // Protected Routes
 Route::middleware(['auth', 'verified'])->group(function () {
-    // Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // Profile
+    // Regular user routes
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Product Analytics (Admin Only)
+    // Admin only routes
+    Route::middleware(['admin'])->group(function () {
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/product-analytics', [ProductAnalyticsController::class, 'index'])
-        ->name('product.analytics')
-        ->middleware('can:view-analytics');
+            ->name('product.analytics');
+});
 });
 
 // Sandbox Routes (Development Only)
