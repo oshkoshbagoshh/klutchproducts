@@ -15,10 +15,11 @@ use Inertia\Inertia;
 |--------------------------------------------------------------------------
 */
 
-// Public Routes
+// Public Routes - No middleware needed for basic pages
 Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('home');
+
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 // Add unauthorized route
