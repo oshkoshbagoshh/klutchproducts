@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover premium and innovative products at Klutch. Quality meets design in our expertly crafted collection.">
+    <meta name="description"
+          content="Discover premium and innovative products at Klutch. Quality meets design in our expertly crafted collection.">
     <meta name="keywords" content="Klutch, products, innovation, design, premium products">
     <title>Klutch Products - Innovation Meets Design</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -388,7 +389,7 @@
     <div class="slideshow" role="region" aria-label="Featured Products">
         <div class="slide active">
             <div class="slide-content">
-                <h2>Welcome to Klutch</h2>
+                <h2>Welcome to Klutch Products</h2>
                 <p>Discover our premium collection of innovative products</p>
                 <button class="cta-button">Shop Now</button>
             </div>
@@ -461,3 +462,60 @@
                     </div>
                     <p>How we're making our production process more environmentally friendly...</p>
                 </div>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Join Our Team</h2>
+            <p>Be part of something extraordinary. We're always looking for talented individuals to join our innovative
+                team.</p>
+            <a href="#careers" class="cta-button">Join Klutch Today</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Klutch</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#press">Press</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#shipping">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookies">Cookie Policy</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Klutch Products. All rights reserved.</p>
+        </div>
+    </footer>

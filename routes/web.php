@@ -7,7 +7,11 @@ Route::get('/', function () {
 });
 
 
-
+/******
+ *
+ * Dashboard
+ *
+ */
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -17,3 +21,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+

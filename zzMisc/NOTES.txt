@@ -1,0 +1,79 @@
+- TODO: stripe integration
+- TODO: Klutch products integration
+- TODO: create new users
+- TODO: API testing with Insomnia
+- TODO: make UI modern
+- TODO: web development checklist
+- TODO: music / javadio stuff
+- TODO: amazon products
+- TODO: factories, seeders, models, migrations
+- TODO: git branching strategy
+- TODO: moneys form
+- TODO: schema (reviews, categories, tags)
+- TODO: search functionality
+- TODO: create a deployment checklist
+- TODO: data visualization
+- TODO: https://docs.google.com/forms/d/e/1FAIpQLSehfRmhFEhTyPsuX9dO3PKnR8y5G7wRPs_BOwGc4boB0fNu0A/viewform?fbzx=-4036171952754493619
+- TODO: list of users, etc
+- TODO: frontend
+- TODO: wirecutter
+- TODO: coupons
+- TODO: SEO
+- TODO: pentecost.ai integration
+- TODO: documenation
+- TODO: queries
+- TODO: class diagram
+- TODO: wireframe
+- TODO: reports
+-TODO: validation
+-TODO: error handling
+- TODO: input required
+- TODO: laravel debug bar
+- TODO: Larastan
+- TODO: shell scripts
+- TODO: make files
+- TODO: laravel sanctum
+- TODO: user balance/ payment system / wallet
+- TODO: privacy policy and cookie policy
+- TODO: IP tracking
+- TODO: - logging middlware to log all incoming requests to application
+- TODO: PHP artisan tinker commands
+
+====================
+
+17 - Create Products -
+- advanced (traits, mutators,set Mutated attribute, etc)
+
+===============
+
+Chapter 18 - Create Products with Images
+
+- updated form to allow image uploads, then used laravel storage to allow filesystem access so admins can upload pics
+- however, this broke all the placeholder images, since we had to refactor the reference to the placeholder images, so we will need to fix this
+
+===========
+
+Chapter 19 - Edit and Delete Products
+
+======
+Chapter 20 - Refactoring validations
+- created static method in the Product Model called "validate", and then we can call that static method in our controller wherever we need it
+
+
+====
+Chapter 21 - Login System
+
+- built with laravel ui --auth
+
+=============
+Chapter 22 - Refactoring User
+
+- added role and balance, and getters and setters
+
+===========
+
+Chapter 23 - AdminAuthMiddleware
+
+- logging middleware to log all incoming requests to application
+
+

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+    .product-text { font-family: Arial, sans-serif; }
+  </style>
+  <rect width="100%" height="100%" fill="#f0f0f0"/>
+  <polygon points="10,50 30,10 50,50" fill="#4a90e2"/>
+  <text x="60" y="35" class="logo-text" font-size="24" fill="#333">KLUTCH</text>
+  <text x="60" y="50" class="product-text" font-size="14" fill="#666">PRODUCTS</text>
+</svg>
