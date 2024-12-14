@@ -1,7 +1,8 @@
 # Online Store - Klutch Products
 
+## Preview
+![Work In Progress - Preview](zzMisc/v3-gif.gif)
 
-## Description
 
 ## TODO
 
@@ -13,3 +14,6 @@
 - upload sound packs, samples, etc
 - create utility script for renaming things
 - branches
+
+## 
+- [ ] BOOKMARK: Left off at BOTMAN
