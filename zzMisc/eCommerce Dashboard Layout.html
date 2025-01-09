@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Analytics Dashboard</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .chart-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .tooltip {
+            position: absolute;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+        }
+        .axis-label {
+            font-size: 12px;
+            fill: #666;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800">eCommerce Analytics Dashboard</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Revenue Overview -->
+            <div class="chart-container">
+                <h2 class="text-xl font-semibold mb-4">Revenue Overview</h2>
+                <div id="revenue-chart"></div>
+            </div>
+            
+            <!-- Product Categories -->
+            <div class="chart-container">
+                <h2 class="text-xl font-semibold mb-4">Sales by Category</h2>
+                <div id="category-chart"></div>
+            </div>
+            
+            <!-- Customer Behavior -->
+            <div class="chart-container">
+                <h2 class="text-xl font-semibold mb-4">Customer Purchase Patterns</h2>
+                <div id="customer-chart"></div>
+            </div>
+            
+            <!-- Geographic Distribution -->
+            <div class="chart-container">
+                <h2 class="text-xl font-semibold mb-4">Geographic Distribution</h2>
+                <div id="geo-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Sample eCommerce Data
+    const revenueData = [
+        { month: 'Jan', revenue: 45000 },
+        { month: 'Feb', revenue: 52000 },
+        { month: 'Mar', revenue: 49000 },
+        { month: 'Apr', revenue: 58000 },
+        { month: 'May', revenue: 63000 },
+        { month: 'Jun', revenue: 71000 },
+        { month: 'Jul', revenue: 75000 },
+        { month: 'Aug', revenue: 68000 },
+        { month: 'Sep', revenue: 72000 },
+        { month: 'Oct', revenue: 78000 },
+        { month: 'Nov', revenue: 85000 },
+        { month: 'Dec', revenue: 92000 }
+    ];
+
+    const categoryData = [
+        { category: 'Electronics', sales: 35000 },
+        { category: 'Clothing', sales: 28000 },
+        { category: 'Home & Garden', sales: 22000 },
+        { category: 'Books', sales: 15000 },
+        { category: 'Sports', sales: 18000 }
+    ];
+
+    // Revenue Chart
+    function createRevenueChart() {
+        const margin = {top: 20, right: 20, bottom: 40, left: 60};
+        const width = 500 - margin.left - margin.right;
+        const height = 300 - margin.top - margin.bottom;
+
+        const svg = d3.select("#revenue-chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const x = d3.scaleBand()
+            .range([0, width])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .range([height, 0]);
+
+        x.domain(revenueData.map(d => d.month));
+        y.domain([0, d3.max(revenueData, d => d.revenue)]);
+
+        // Add X axis
+        svg.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x));
+
+        // Add Y axis
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        // Add bars
+        svg.selectAll(".bar")
+            .data(revenueData)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.month))
+            .attr("width", x.bandwidth())
+            .attr("y", d => y(d.revenue))
+            .attr("height", d => height - y(d.revenue))
+            .attr("fill", "#4f46e5")
+            .on("mouseover", function(event, d) {
+                d3.select(this).attr("fill", "#6366f1");
+            })
+            .on("mouseout", function(event, d) {
+                d3.select(this).attr("fill", "#4f46e5");
+            });
+    }
+
+    // Category Chart
+    function createCategoryChart() {
+        const width = 500;
+        const height = 300;
+        const radius = Math.min(width, height) / 2;
+
+        const color = d3.scaleOrdinal()
+            .domain(categoryData.map(d => d.category))
+            .range(d3.schemeCategory10);
+
+        const pie = d3.pie()
+            .value(d => d.sales);
+
+        const arc = d3.arc()
+            .innerRadius(radius * 0.5)
+            .outerRadius(radius * 0.8);
+
+        const svg = d3.select("#category-chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width/2},${height/2})`);
+
+        const arcs = svg.selectAll("arc")
+            .data(pie(categoryData))
+            .enter()
+            .append("g");
+
+        arcs.append("path")
+            .attr("d", arc)
+            .attr("fill", d => color(d.data.category))
+            .attr("stroke", "white")
+            .style("stroke-width", "2px")
+            .on("mouseover", function(event, d) {
+                d3.select(this)
+                    .attr("opacity", 0.8);
+            })
+            .on("mouseout", function(event, d) {
+                d3.select(this)
+                    .attr("opacity", 1);
+            });
+
+        // Add labels
+        arcs.append("text")
+            .attr("transform", d => `translate(${arc.centroid(d)})`)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "12px")
+            .text(d => d.data.category);
+    }
+
+    // Initialize charts
+    document.addEventListener('DOMContentLoaded', (event) => {
+        createRevenueChart();
+        createCategoryChart();
+    });
+    </script>
+</body>
+</html>

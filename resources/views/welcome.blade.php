@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="Discover premium and innovative products at Klutch. Quality meets design in our expertly crafted collection.">
+        content="Discover premium and innovative products at Klutch. Quality meets design in our expertly crafted collection.">
     <meta name="keywords" content="Klutch, products, innovation, design, premium products">
     <title>Klutch Products - Innovation Meets Design</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <style>
+    {{-- <style>
         :root {
             --black: #000000;
             --yellow: #FFD700;
@@ -348,6 +349,7 @@
 
         /* Print Styles */
         @media print {
+
             .header,
             .slideshow,
             .cta-section {
@@ -532,287 +534,290 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
-    </style>
+    </style> --}}
+    <link rel="stylesheet" href="/resources/css/welcome.css">
 </head>
+
 <body>
-<header class="header">
-    <nav class="nav">
-        <a href="#home" class="logo">Klutch<span>.</span></a>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#products">Products</a>
-            <a href="#services">Services</a>
-            <a href="#misc">Misc</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-</header>
-
-<div class="construction-banner" role="alert">
-    <div class="construction-title">
-        🚧 UNDER CONSTRUCTION 🚧
-    </div>
-    <p class="construction-text">
-        NOTE: WE ARE CURRENTLY UNDER CONSTRUCTION<br>
-        THIS IS JUST A TESTING VERSION
-    </p>
-    <article>
-        If you have any questions, please reach out to
-        <a href="mailto:info@klutchproducts.com">info@klutchproducts.com</a>
-    </article>
-</div>
-
-
-{{--HERO--}}
-<div class="slideshow" role="region" aria-label="Featured Products">
-    <div class="slide active">
-        <div class="slide-content">
-            <h2>Welcome to Klutch Products</h2>
-            <p>Discover our premium collection of innovative products</p>
-            <button class="cta-button">Shop Now</button>
-        </div>
-    </div>
-    <div class="slide">
-        <div class="slide-content">
-            <h2>Quality Meets Design</h2>
-            <p>Expertly crafted products for your lifestyle</p>
-            <button class="cta-button">Learn More</button>
-        </div>
-    </div>
-    <div class="slide">
-        <div class="slide-content">
-            <h2>New Arrivals</h2>
-            <p>Check out our latest collection</p>
-            <button class="cta-button">View Collection</button>
-        </div>
-    </div>
-</div>
-
-
-<section class="features">
-    <div class="features-grid">
-        <div class="feature-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Premium Quality</h3>
-            <p>All our products are crafted with the finest materials and attention to detail.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-shipping-fast"></i>
-            <h3>Fast Shipping</h3>
-            <p>Quick and reliable worldwide shipping on all orders.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-headset"></i>
-            <h3>24/7 Support</h3>
-            <p>Our customer service team is always here to help you.</p>
-        </div>
-    </div>
-</section>
-
-<section class="blog-section">
-    <h2>Latest Blog Posts</h2>
-    <div class="blog-grid">
-        <article class="blog-card">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Blog post 1">
-            <div class="blog-content">
-                <h3>10 Tips for Product Innovation</h3>
-                <div class="blog-meta">
-                    <span>Dec 13, 2024</span> • <span>5 min read</span>
-                </div>
-                <p>Learn the secrets of successful product innovation and development...</p>
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="logo">Klutch<span>.</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#misc">Misc</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <a href="#chat">Chat</a>
             </div>
-        </article>
-        <article class="blog-card">
-            <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04" alt="Blog post 2">
-            <div class="blog-content">
-                <h3>The Future of Design</h3>
-                <div class="blog-meta">
-                    <span>Dec 12, 2024</span> • <span>4 min read</span>
-                </div>
-                <p>Exploring upcoming trends in product design and user experience...</p>
-            </div>
-        </article>
-        <article class="blog-card">
-            <img src="https://images.unsplash.com/photo-1441985969846-3e7c90531139" alt="Blog post 3">
-            <div class="blog-content">
-                <h3>Sustainability in Manufacturing</h3>
-                <div class="blog-meta">
-                    <span>Dec 11, 2024</span> • <span>6 min read</span>
-                </div>
-                <p>How we're making our production process more environmentally friendly...</p>
-            </div>
+        </nav>
+    </header>
+
+    <div class="construction-banner" role="alert">
+        <div class="construction-title">
+            🚧 UNDER CONSTRUCTION 🚧
+        </div>
+        <p class="construction-text">
+            NOTE: WE ARE CURRENTLY UNDER CONSTRUCTION<br>
+            THIS IS JUST A TESTING VERSION
+        </p>
+        <article>
+            If you have any questions, please reach out to
+            <a href="mailto:info@klutchproducts.com">info@klutchproducts.com</a>
         </article>
     </div>
-</section>
 
-<section class="featured-products" data-aos="fade-up">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Product 1"
-                 class="product-image">
-            <div class="product-info">
-                <h3>Premium Product 1</h3>
-                <p>High-quality craftsmanship with modern design</p>
-                <div class="product-price">$99.99</div>
-                <button class="cta-button">Add to Cart</button>
+
+    {{-- HERO --}}
+    <div class="slideshow" role="region" aria-label="Featured Products">
+        <div class="slide active">
+            <div class="slide-content">
+                <h2>Welcome to Klutch Products</h2>
+                <p>Discover our premium collection of innovative products</p>
+                <button class="cta-button">Shop Now</button>
             </div>
         </div>
-        <!-- Add more product cards -->
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials" data-aos="fade-up">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-slider">
-        <div class="testimonial-slide active">
-            <img src="https://i.pravatar.cc/150?img=1" alt="Customer 1" class="testimonial-avatar">
-            <p>"Absolutely love the quality of Klutch products. The attention to detail is outstanding!"</p>
-            <h4>John Doe</h4>
-            <p>CEO, Tech Corp</p>
+        <div class="slide">
+            <div class="slide-content">
+                <h2>Quality Meets Design</h2>
+                <p>Expertly crafted products for your lifestyle</p>
+                <button class="cta-button">Learn More</button>
+            </div>
         </div>
-        <!-- Add more testimonials -->
-    </div>
-</section>
-
-<!-- Newsletter Section -->
-<section class="newsletter" data-aos="fade-up">
-    <h2>Stay Updated</h2>
-    <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
-    <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email">
-        <button type="submit" class="cta-button">Subscribe</button>
-    </form>
-</section>
-
-<!-- Chat Widget -->
-<div class="chat-widget">
-    <div class="chat-button">
-        <i class="fas fa-comments"></i>
-    </div>
-    <div class="chat-popup">
-        <div class="chat-header">
-            <span>Chat Support</span>
-            <i class="fas fa-times"></i>
-        </div>
-        <div class="chat-messages"></div>
-        <div class="chat-input">
-            <input type="text" placeholder="Type your message...">
-            <button class="cta-button">Send</button>
+        <div class="slide">
+            <div class="slide-content">
+                <h2>New Arrivals</h2>
+                <p>Check out our latest collection</p>
+                <button class="cta-button">View Collection</button>
+            </div>
         </div>
     </div>
-</div>
 
 
-<section class="cta-section">
-    <div class="cta-content">
-        <h2>Join Our Team</h2>
-        <p>Be part of something extraordinary. We're always looking for talented individuals to join our innovative
-            team.</p>
-        <a href="#careers" class="cta-button">Join Klutch Today</a>
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Premium Quality</h3>
+                <p>All our products are crafted with the finest materials and attention to detail.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Shipping</h3>
+                <p>Quick and reliable worldwide shipping on all orders.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our customer service team is always here to help you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Blog post 1">
+                <div class="blog-content">
+                    <h3>10 Tips for Product Innovation</h3>
+                    <div class="blog-meta">
+                        <span>Dec 13, 2024</span> • <span>5 min read</span>
+                    </div>
+                    <p>Learn the secrets of successful product innovation and development...</p>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04" alt="Blog post 2">
+                <div class="blog-content">
+                    <h3>The Future of Design</h3>
+                    <div class="blog-meta">
+                        <span>Dec 12, 2024</span> • <span>4 min read</span>
+                    </div>
+                    <p>Exploring upcoming trends in product design and user experience...</p>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1441985969846-3e7c90531139" alt="Blog post 3">
+                <div class="blog-content">
+                    <h3>Sustainability in Manufacturing</h3>
+                    <div class="blog-meta">
+                        <span>Dec 11, 2024</span> • <span>6 min read</span>
+                    </div>
+                    <p>How we're making our production process more environmentally friendly...</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="featured-products" data-aos="fade-up">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Product 1"
+                    class="product-image">
+                <div class="product-info">
+                    <h3>Premium Product 1</h3>
+                    <p>High-quality craftsmanship with modern design</p>
+                    <div class="product-price">$99.99</div>
+                    <button class="cta-button">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add more product cards -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" data-aos="fade-up">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Customer 1" class="testimonial-avatar">
+                <p>"Absolutely love the quality of Klutch products. The attention to detail is outstanding!"</p>
+                <h4>John Doe</h4>
+                <p>CEO, Tech Corp</p>
+            </div>
+            <!-- Add more testimonials -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" data-aos="fade-up">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit" class="cta-button">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-button">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-popup">
+            <div class="chat-header">
+                <span>Chat Support</span>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message...">
+                <button class="cta-button">Send</button>
+            </div>
+        </div>
     </div>
-</section>
-
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-</a>
 
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>About Klutch</h3>
-            <ul class="footer-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#careers">Careers</a></li>
-                <li><a href="#press">Press</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Join Our Team</h2>
+            <p>Be part of something extraordinary. We're always looking for talented individuals to join our innovative
+                team.</p>
+            <a href="#careers" class="cta-button">Join Klutch Today</a>
         </div>
-        <div class="footer-section">
-            <h3>Support</h3>
-            <ul class="footer-links">
-                <li><a href="#help">Help Center</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#shipping">Shipping Info</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Legal</h3>
-            <ul class="footer-links">
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
-                <li><a href="#cookies">Cookie Policy</a></li>
-                <li><a href="#compliance">Compliance</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Connect</h3>
-            <ul class="footer-links">
-                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Klutch Products. All rights reserved.</p>
-    </div>
-</footer>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-    // Back to Top Button
-    const backToTop = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Klutch</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#press">Press</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#shipping">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#cookies">Cookie Policy</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Klutch Products. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Chat Widget
+        const chatButton = document.querySelector('.chat-button');
+        const chatPopup = document.querySelector('.chat-popup');
+        const chatClose = document.querySelector('.chat-header .fa-times');
+
+        chatButton.addEventListener('click', () => {
+            chatPopup.classList.toggle('active');
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+        });
+
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach(slide => slide.classList.remove('active'));
+            testimonials[index].classList.add('active');
         }
-    });
 
-    // Chat Widget
-    const chatButton = document.querySelector('.chat-button');
-    const chatPopup = document.querySelector('.chat-popup');
-    const chatClose = document.querySelector('.chat-header .fa-times');
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
 
-    chatButton.addEventListener('click', () => {
-        chatPopup.classList.toggle('active');
-    });
-
-    chatClose.addEventListener('click', () => {
-        chatPopup.classList.remove('active');
-    });
-
-    // Testimonial Slider
-    const testimonials = document.querySelectorAll('.testimonial-slide');
-    let currentTestimonial = 0;
-
-    function showTestimonial(index) {
-        testimonials.forEach(slide => slide.classList.remove('active'));
-        testimonials[index].classList.add('active');
-    }
-
-    function nextTestimonial() {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }
-
-    setInterval(nextTestimonial, 5000);
-</script>
+        setInterval(nextTestimonial, 5000);
+    </script>
 </body>
-</html>
 
+</html>

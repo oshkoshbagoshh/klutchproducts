@@ -1,0 +1,3 @@
+database name: u957488481_kptest
+MySQL User:
+u957488481_aj
