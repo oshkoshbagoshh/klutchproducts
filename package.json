@@ -17,5 +17,8 @@
         "vite": "^6.0",
         "bootstrap": "^5.3.3",
         "font-awesome": "^4.7.0"
+    },
+    "dependencies": {
+        "alpinejs": "3.14.8"
     }
 }
