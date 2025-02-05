@@ -1,0 +1,9 @@
+GET http://localhost:8000/products/2
+Accept: application/json
+
+###
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=PhpStorm
+
+###
