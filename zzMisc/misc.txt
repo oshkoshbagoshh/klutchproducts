@@ -1,0 +1,2 @@
+- can any user view the application, or do they have to be registered?
+

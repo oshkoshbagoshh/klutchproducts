@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * @Author: AJ Javadi
+ * @Email: amirjavadi25@gmail.com
+ * @Date: 2025-02-05 17:07:29
+ * @Last Modified by:   Someone
+ * @Last Modified time: 2025-02-05 17:37:59
+ * @Description: file:///Users/aj/Herd/klutch_products/routes/web.php
+ */
+
+use App\Http\Controllers\AboutController;
+use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -12,6 +23,18 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/sandbox', function () {
+    return Inertia::render('Sandbox', [
+        'users' => User::all(),
+
+    ]);
+})->name('Sandbox');
+
+// About
+Route::get('/about', [AboutController::class, 'index']);
+
+// ==================================
 
 Route::middleware([
     'auth:sanctum',
