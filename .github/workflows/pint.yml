@@ -1,0 +1,39 @@
+name: Laravel Pint Code Style
+
+on:
+  push:
+    branches:
+      - main # or master, depending on your default branch name
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          tools: composer:v2
+
+      - name: Install Dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Run Laravel Pint
+        run: ./vendor/bin/pint
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "style: format code using Laravel Pint"
+          commit_user_name: GitHub Action
+          commit_user_email: actions@github.com
+          commit_author: GitHub Action <actions@github.com>
