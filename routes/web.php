@@ -5,15 +5,15 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2025-02-05 17:07:29
  * @Last Modified by: AJ Javadi
- * @Last Modified time: 2025-02-06 00:31:49
+ * @Last Modified time: 2025-02-06 07:22:56
  * @Description: file:///Users/aj/Herd/klutch_products/routes/web.php
  */
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BucketController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SandboxController;
 use App\Http\Controllers\TaskController;
-use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -43,12 +43,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('About Us');
 /* -------------------------------------------------------------------------- */
 /* Sandbox
 /* -------------------------------------------------------------------------- */
-Route::get('/sandbox', function () {
-    return Inertia::render('Sandbox', [
-        'users' => User::all(),
-
-    ]);
-})->name('Sandbox');
+Route::get('/sandbox', [SandboxController::class, 'index'])->name('Sandbox');
 
 // Route::get('/about', [AboutController::class, 'index'])->name('About Us');
 
