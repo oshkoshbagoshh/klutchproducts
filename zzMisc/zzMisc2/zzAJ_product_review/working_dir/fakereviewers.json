@@ -1,0 +1,191 @@
+{
+    "amazon_reviewers": {
+      "platform": "Amazon.com",
+      "last_updated": "2025-01-13",
+      "reviewers": [
+        {
+          "id": "LM2025",
+          "personal": {
+            "name": "Linda Matthews",
+            "location": "Seattle, WA",
+            "member_since": "2019"
+          },
+          "stats": {
+            "reviewer_rank": "Top 500",
+            "total_reviews": 847,
+            "helpful_votes": 15234,
+            "trust_rating": "92%"
+          },
+          "expertise": {
+            "primary_categories": [
+              "Home & Kitchen",
+              "Books",
+              "Appliances"
+            ],
+            "review_style": "Detailed with visuals",
+            "average_review_length": "1500 words"
+          },
+          "review_format": {
+            "includes_photos": true,
+            "includes_videos": true,
+            "typical_sections": [
+              "Initial Impressions",
+              "Testing Period",
+              "Pros/Cons",
+              "Long-term Update"
+            ]
+          },
+          "sample_review_template": {
+            "title": "Comprehensive 6-Month Review - Pros & Cons with Photos",
+            "structure": [
+              "First Impressions",
+              "Setup Process",
+              "Daily Usage",
+              "Photo Gallery",
+              "Pros List",
+              "Cons List",
+              "Final Verdict"
+            ]
+          }
+        },
+        {
+          "id": "MC2025",
+          "personal": {
+            "name": "Mike Chen",
+            "location": "San Jose, CA",
+            "member_since": "2020"
+          },
+          "stats": {
+            "reviewer_rank": "Top 1000",
+            "total_reviews": 632,
+            "helpful_votes": 8976,
+            "trust_rating": "88%"
+          },
+          "expertise": {
+            "primary_categories": [
+              "Electronics",
+              "Computers",
+              "Gaming"
+            ],
+            "review_style": "Technical",
+            "average_review_length": "1200 words"
+          },
+          "review_format": {
+            "includes_photos": true,
+            "includes_videos": true,
+            "typical_sections": [
+              "Technical Specs",
+              "Benchmark Results",
+              "Comparison Charts",
+              "Performance Analysis"
+            ]
+          },
+          "sample_review_template": {
+            "title": "Detailed Technical Analysis with Benchmarks",
+            "structure": [
+              "Specifications",
+              "Testing Methodology",
+              "Performance Data",
+              "Comparative Analysis",
+              "Value Assessment"
+            ]
+          }
+        },
+        {
+          "id": "JT2025",
+          "personal": {
+            "name": "Jessica Torres",
+            "location": "Miami, FL",
+            "member_since": "2021"
+          },
+          "stats": {
+            "reviewer_rank": "Top 2000",
+            "total_reviews": 423,
+            "helpful_votes": 6543,
+            "trust_rating": "95%"
+          },
+          "expertise": {
+            "primary_categories": [
+              "Sports & Fitness",
+              "Health & Wellness",
+              "Athletic Wear"
+            ],
+            "review_style": "Video-focused",
+            "average_review_length": "800 words"
+          },
+          "review_format": {
+            "includes_photos": true,
+            "includes_videos": true,
+            "typical_sections": [
+              "Quick Overview",
+              "Video Demo",
+              "Workout Test",
+              "Results Summary"
+            ]
+          },
+          "sample_review_template": {
+            "title": "30-Day Fitness Equipment Test Results",
+            "structure": [
+              "Initial Setup",
+              "Workout Demonstrations",
+              "Progress Tracking",
+              "Before/After Results"
+            ]
+          }
+        },
+        {
+          "id": "RW2025",
+          "personal": {
+            "name": "Robert Wilson",
+            "location": "Portland, OR",
+            "member_since": "2018"
+          },
+          "stats": {
+            "reviewer_rank": "Top 1500",
+            "total_reviews": 725,
+            "helpful_votes": 9876,
+            "trust_rating": "90%"
+          },
+          "expertise": {
+            "primary_categories": [
+              "Garden & Outdoor",
+              "Tools & Home Improvement",
+              "Books"
+            ],
+            "review_style": "Experience-based",
+            "average_review_length": "1000 words"
+          },
+          "review_format": {
+            "includes_photos": true,
+            "includes_videos": false,
+            "typical_sections": [
+              "Initial Thoughts",
+              "Practical Usage",
+              "Long-term Results",
+              "Recommendations"
+            ]
+          },
+          "sample_review_template": {
+            "title": "3-Month Garden Tool Experience Review",
+            "structure": [
+              "Product Background",
+              "Usage Experience",
+              "Durability Report",
+              "Value Analysis",
+              "Final Thoughts"
+            ]
+          }
+        }
+      ],
+      "metadata": {
+        "total_reviewers": 4,
+        "average_trust_rating": "91.25%",
+        "combined_reviews": 2627,
+        "platform_metrics": {
+          "photo_inclusion_rate": "100%",
+          "video_inclusion_rate": "75%",
+          "average_review_length": "1125 words"
+        }
+      }
+    }
+  }

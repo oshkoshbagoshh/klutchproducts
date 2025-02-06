@@ -1,0 +1,52 @@
+Amazon Influencer Notepad
+
+
+#klutch  #prior
+
+
+Initial Thoughts:
+
+1. Start with the hard stuff first - replace the web form with a blade PHP form that collects the information needed from the user (“man_a, man_b”), no one knows what that is LOL.
+
+2. connect the user to the big 5 ocean personality type test on the site for free (totallly optional, but it will help us get to know you betterl (we can offer some incentives etc)
+
+3. I’ll have that as an API, so you can snag it from the database whenever you need to get it it back,
+
+
+4. Feed that back into your AI product stuff to improve the review profiles
+
+
+5. It comes back to me again at the end now that it got the products and the scripts, articles etc. form you, I need to pull the newest products and scripts spreadsheet (I’ll be on the lookout for last row of the table)
+
+6. AI will take the text and generate blog posts through the “BlogPost” model, which will have categories, tags, etc tied back from the products spreadsheet and your affiliate links
+
+7. they will be optimized for SEO
+
+8. Reports, admin dashboard, etc
+
+
+======================================================
+
+Here's the condensed version of the Amazon Influencer Notepad:
+
+1. Replace web form with PHP blade form (collect "man_a, man_b" data)
+
+
+2. Add Big 5 OCEAN personality test integration (optional)
+
+
+3. Set up API for personality data retrieval
+
+4. Use personality data to enhance review profiles via AI
+
+5. Monitor product/script spreadsheet updates (track last row)
+
+6. Generate SEO-optimized blog posts through "BlogPost" model
+
+   - Categories & tags from product spreadsheet
+   - Include affiliate links
+
+7. SEO optimization for all content
+
+
+8. Create admin dashboard & reports

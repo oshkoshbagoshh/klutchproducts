@@ -1,0 +1,76 @@
+{
+    "influencers": [
+        {
+            "email": "Janelle.nowroozi@gmail.com",
+            "name": "Janelle",
+            "opposite_email": "klutchsocialmedia@gmail.com",
+            "same_email": null,
+            "bio": "Janelle is a 34-year-old mother of a 1-year-old, living in a small single-family home in the rural suburbs of Milwaukee. She's passionate about health and wellness, loves being a mom, and enjoys social activities. However, she isn't a fan of cooking and often looks for products that make her day-to-day life easier, especially when it comes to quick and healthy meal prep. Her content focuses on practical solutions for busy moms, with an emphasis on efficiency, family life, and wellness.",
+            "product_group": ["Mom_A", "Women_A"]
+        },
+        {
+            "email": "klutchsocialmedia@gmail.com",
+            "name": "Jeff",
+            "opposite_email": "Janelle.nowroozi@gmail.com",
+            "same_email": null,
+            "bio": "Jeff is a 36-year-old single male living in a large apartment in Milwaukee. He's a musician and a passionate home cook. He enjoys experimenting with recipes and is always on the lookout for new kitchen gadgets that enhance his culinary creations. Jeff's content is centered around food, music, and creative living. He values products that help him explore new cooking techniques and improve his daily routine in the kitchen.",
+            "product_group": ["Men_A"]
+        },
+        {
+            "email": "Michael.nowroozi@pentecost.ai",
+            "name": "Michael",
+            "opposite_email": null,
+            "same_email": "klutchsocialmedia@gmail.com",
+            "bio": null,
+            "product_group": ["Men_A"]
+        },
+        {
+            "email": "Isvien@me.com",
+            "name": "Isaac",
+            "opposite_email": null,
+            "same_email": "klutchsocialmedia@gmail.com",
+            "bio": "Isaac is a 37-year-old single male living in a duplex that he owns on the west side of Milwaukee. He has a small dog who's very attached to him and follows him around everywhere. Isaac previously owned an audio and visual installation company but is currently working more in Real Estate, focusing on rentals and house flipping. He has a love for high-end food and enjoys exploring new restaurants. His interests also include fashion, where he likes finding great deals on luxury items, and traveling, both locally around Wisconsin, throughout the U.S., and internationally across Europe. In his free time, Isaac enjoys spending time with friends, attending plays, and going to concerts in the city.",
+            "product_group": ["Men_B"]
+        },
+        {
+            "email": "kamran0899@icloud.com",
+            "name": "Kamran",
+            "opposite_email": null,
+            "same_email": "klutchsocialmedia@gmail.com",
+            "bio": null,
+            "product_group": ["Men_A"]
+        },
+        {
+            "email": "hgoetsch23@hotmail.com",
+            "name": "Haley",
+            "opposite_email": "Janelle.nowroozi@gmail.com",
+            "same_email": null,
+            "bio": null,
+            "product_group": ["Women_A"]
+        },
+        {
+            "email": "Wellnessadvocacy101@gmail.com",
+            "name": "Dave",
+            "opposite_email": null,
+            "same_email": "klutchsocialmedia@gmail.com",
+            "bio": null,
+            "product_group": ["Men_A"]
+        },
+        {
+            "email": "amirjavadi25@gmail.com",
+            "name": "AJ",
+            "opposite_email": null,
+            "same_email": "klutchsocialmedia@gmail.com",
+            "bio": null,
+            "product_group": ["Men_A"]
+        },
+        {
+            "email": "amyomiller630@gmail.com",
+            "name": "Amy",
+            "opposite_email": null,
+            "same_email": "Janellenowroozi@gmail.com",
+            "bio": "Amy is a mom of two daughters, three stepdaughters, two stepsons, and a proud grandmother of several grandbabies. She lives in a beautiful suburb of Chicago with her husband, who's an accountant. Amy loves exploring a wide variety of products, from fashion and skincare to home decor and kitchen gadgets, as well as items for her kids and grandkids. She enjoys going out to eat, trying new things, and traveling. Spending time with her family is one of her favorite pastimes, whether it's at home or on family adventures.",
+            "product_group": ["Women_A"]
+        }
+    ]
+}
