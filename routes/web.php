@@ -5,7 +5,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2025-02-05 17:07:29
  * @Last Modified by: AJ Javadi
- * @Last Modified time: 2025-02-06 07:22:56
+ * @Last Modified time: 2025-02-06 13:18:14
  * @Description: file:///Users/aj/Herd/klutch_products/routes/web.php
  */
 
@@ -22,14 +22,14 @@ use Inertia\Inertia;
 // =========================================
 //
 //  original home
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
+Route::get('/', function () {
+    return Inertia::render('zzWelcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
 
 /* -------------------------------------------------------------------------- */
 
@@ -38,12 +38,12 @@ use Inertia\Inertia;
 - Home Controller, About Us
 /* -------------------------------------------------------------------------- */
 
-Route::get('/', [HomeController::class, 'index'])->name('Home');
-Route::get('/about', [HomeController::class, 'about'])->name('About Us');
+// Route::get('/', [HomeController::class, 'index'])->name('Home');
+// Route::get('/about', [HomeController::class, 'about'])->name('About Us');
 /* -------------------------------------------------------------------------- */
 /* Sandbox
 /* -------------------------------------------------------------------------- */
-Route::get('/sandbox', [SandboxController::class, 'index'])->name('Sandbox');
+// Route::get('/sandbox', [SandboxController::class, 'index'])->name('Sandbox');
 
 // Route::get('/about', [AboutController::class, 'index'])->name('About Us');
 
