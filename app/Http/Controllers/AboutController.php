@@ -9,6 +9,6 @@ class AboutController extends Controller
     // Display the "About Us" Component
     public function index()
     {
-        return Inertia::render('About-Us');
+        return Inertia::render('AboutUs');
     }
 }
