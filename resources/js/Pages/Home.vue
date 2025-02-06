@@ -3,6 +3,7 @@ import Layout from "../Layouts/AppLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import { cilHome, cilUser, cilBell, cilEnvelopeClosed } from "@coreui/icons";
 import CIcon from "@coreui/icons-vue";
+import MiscLayout from "@/Layouts/MiscLayout.vue";
 
 defineProps({
     title: String,
@@ -11,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <Layout>
+    <MiscLayout>
         <Head :title="title" />
 
         <!-- Hero Section -->
@@ -54,7 +55,7 @@ defineProps({
                     <!-- Feature 1 -->
                     <div class="p-6 rounded-lg bg-columbia_blue-50">
                         <div class="mb-4 text-coral-500">
-                            <CIcon :icon="cilHome" size="xl" />
+                            <CIcon :icon="cilHome" size="lg" />
                         </div>
                         <h3 class="text-xl font-semibold text-raisin_black-500">
                             Easy Integration
@@ -68,7 +69,7 @@ defineProps({
                     <!-- Feature 2 -->
                     <div class="p-6 rounded-lg bg-columbia_blue-50">
                         <div class="mb-4 text-coral-500">
-                            <CIcon :icon="cilUser" size="xl" />
+                            <CIcon :icon="cilUser" size="lg" />
                         </div>
                         <h3 class="text-xl font-semibold text-raisin_black-500">
                             User-Friendly
@@ -82,7 +83,7 @@ defineProps({
                     <!-- Feature 3 -->
                     <div class="p-6 rounded-lg bg-columbia_blue-50">
                         <div class="mb-4 text-coral-500">
-                            <CIcon :icon="cilBell" size="xl" />
+                            <CIcon :icon="cilBell" size="lg" />
                         </div>
                         <h3 class="text-xl font-semibold text-raisin_black-500">
                             Real-time Updates
@@ -130,7 +131,7 @@ defineProps({
                 </div>
             </div>
         </div>
-    </Layout>
+    </MiscLayout>
 </template>
 
 <style scoped>
