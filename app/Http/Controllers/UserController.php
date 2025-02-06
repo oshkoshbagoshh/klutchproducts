@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Gate;
 use Inertia\Inertia;
 
 class UserController extends Controller
@@ -39,6 +41,11 @@ class UserController extends Controller
     {
         return Inertia::render('User/Show', [
             'user' => $user,
+            // 'permissions' => [
+            //     'canEdit' => Gate::allows('edit', $user),
+            //     'canDelete' => Gate::allows('delete-user', $user)
+            // ],
+            'teams' => $user->teams()->with('owner')->get(),
         ]);
     }
 
