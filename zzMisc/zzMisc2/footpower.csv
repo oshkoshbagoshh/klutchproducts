@@ -1,0 +1,6 @@
+"activity_id","log_id","type","date","distance","duration"
+"1","2","running","2024-09-18","2","00:00:15"
+"log_id","user_id","creation_date"
+"2","1","2024-09-18 17:13:12"
+"user_id","username","password","distance_unit","verification_code","verified","creation_date"
+"1","zztest1","zztest1","miles","1234","1","2024-09-18 17:12:53"
