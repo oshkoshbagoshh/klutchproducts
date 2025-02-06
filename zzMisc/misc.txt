@@ -1,2 +1,8 @@
-- can any user view the application, or do they have to be registered?
-
+/*
+ * @Author: AJ Javadi
+ * @Email: amirjavadi25@gmail.com
+ * @Date: 2025-02-05 17:53:41
+ * @Last Modified by:   undefined
+ * @Last Modified time: 2025-02-05 17:53:41
+ * @Description: file:///Users/aj/Herd/klutch_products/zzMisc/misc.txt
+ */
