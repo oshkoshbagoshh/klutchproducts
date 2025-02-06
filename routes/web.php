@@ -10,11 +10,14 @@
  */
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BucketController;
+use App\Http\Controllers\TaskController;
 use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+// =========================================
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -24,6 +27,8 @@ Route::get('/', function () {
     ]);
 });
 
+// =========================================
+// Public views
 Route::get('/sandbox', function () {
     return Inertia::render('Sandbox', [
         'users' => User::all(),
@@ -32,9 +37,16 @@ Route::get('/sandbox', function () {
 })->name('Sandbox');
 
 // About
-Route::get('/about', [AboutController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index'])->name('About Us');
+
+/* -------------------------------------------------------------------------- */
+/* Buckets, Tasks
+/* -------------------------------------------------------------------------- */
+Route::resource('buckets', BucketController::class);
+Route::resource('tasks', TaskController::class);
 
 // ==================================
+// Sanctum Auth Middleware
 
 Route::middleware([
     'auth:sanctum',
