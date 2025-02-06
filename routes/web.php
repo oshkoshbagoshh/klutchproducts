@@ -4,8 +4,8 @@
  * @Author: AJ Javadi
  * @Email: amirjavadi25@gmail.com
  * @Date: 2025-02-05 17:07:29
- * @Last Modified by:   Someone
- * @Last Modified time: 2025-02-05 17:37:59
+ * @Last Modified by: AJ Javadi
+ * @Last Modified time: 2025-02-05 23:05:51
  * @Description: file:///Users/aj/Herd/klutch_products/routes/web.php
  */
 
@@ -18,15 +18,31 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 // =========================================
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+//
+//  original home
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 
+/* -------------------------------------------------------------------------- */
+
+// Home 2
+Route::get('/', function () {
+    return Inertia::render(
+        'Home',
+        [
+            [
+                'canLogin' => Route::has('login'),
+                'canRegister' => Route::has('register'),
+            ],
+        ]
+    );
+})->name('Home');
 // =========================================
 // Public views
 Route::get('/sandbox', function () {
@@ -47,7 +63,7 @@ Route::resource('tasks', TaskController::class);
 
 // ==================================
 // Sanctum Auth Middleware
-
+// ==================================
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
