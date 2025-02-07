@@ -17,6 +17,7 @@ export default {
     theme: {
         extend: {
             colors: {
+                // Custom color palette
                 raisin_black: {
                     DEFAULT: "#231f20",
                     100: "#070606",
@@ -77,12 +78,41 @@ export default {
                     800: "#fecdb7",
                     900: "#fee6db",
                 },
+                // Custom color paletter for blog
+                primary: {
+                    DEFAULT: "#6366F1", // Indigo for links and buttons
+                    hover: "#4F46E5", // Darker indigo for hover states
+                },
+                secondary: {
+                    DEFAULT: "#1A202C", // Dark gray for headings
+                    light: "#718096", // Light gray for descriptions
+                },
+                background: {
+                    DEFAULT: "#FFFFFF", // White for main background
+                    secondary: "#F7FAFC", // Light gray for newsletter section
+                },
+                shadow: {
+                    DEFAULT: "rgba(0, 0, 0, 0.1)", // Shadow color for cards
+                },
             },
-            fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+            spacing: {
+                // Custom spacing for layout
+                18: "4.5rem", // For navigation height
+                72: "18rem", // For featured post image width
+                96: "24rem", // For blog post card width
             },
+            boxShadow: {
+                // Custom shadow for cards
+                card: "0 2px 4px 0 rgba(0, 0, 0, 0.1)",
+            },
+        },
+        fontFamily: {
+            sans: ["Inter", "sans-serif"],
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+        require("@tailwindcss/typography"),
+        require("@tailwindcss/forms"),
+    ],
 };
