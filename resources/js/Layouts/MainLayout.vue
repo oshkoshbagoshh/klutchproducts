@@ -9,12 +9,11 @@
 </template>
 
 <script>
-import Navigation from "./Navigation.vue";
-import FeaturedPost from "./FeaturedPost.vue";
-import BlogGrid from "./BlogGrid.vue";
-import Newsletter from "./Newsletter.vue";
-import Footer from "./Footer.vue";
-
+import Navigation from "@/Components/Navigation.vue";
+import FeaturedPost from "@/Components/FeaturedPost.vue";
+import BlogGrid from "@/Components/BlogGrid.vue";
+import Newsletter from "@/Components/Newsletter.vue";
+import Footer from "@/Components/Footer.vue";
 export default {
     name: "MainLayout",
     components: {
