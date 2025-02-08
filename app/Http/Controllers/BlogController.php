@@ -17,7 +17,8 @@ class BlogController extends Controller
             ['id' => 3, 'title' => 'Third Post', 'content' => 'This is the third post.'],
         ];
 
-        print_r($posts);
+        // print_r($posts);
+        // dd($posts);
 
         return Inertia::render('Blog', compact('posts'));
     }
