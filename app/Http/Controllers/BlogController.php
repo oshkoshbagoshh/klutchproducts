@@ -20,6 +20,6 @@ class BlogController extends Controller
         //         print_r($posts);
         // dd($posts);
 
-        return Inertia::render('Blog', compact('posts'));
+        return Inertia::render('zzBlog', compact('posts'));
     }
 }

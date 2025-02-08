@@ -2,51 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
+use App\Models\Tag;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class HomeController extends Controller
 {
     /**
+     * Render the Home view.
+     *
      * @return \Inertia\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //        Dummy Data to pass into to the Home View
+        // Fetch trending categories (tags) based on post count
+        $trendingTags = Tag::withCount('blogposts')
+            ->orderBy('posts_count', 'desc')
+            ->limit(5)
+            ->get();
+
+        // Fetch latest posts for the carousel
+        $latestPosts = BlogPost::with(['tags', 'user'])
+            ->latest()
+            ->limit(5)
+            ->get();
+
+        // Pass data to the Home view
         $viewData = [
-            'title' => 'Welcome to Not Another Blog Site',
+            'title' => 'Welcome to Not Another zzBlog Site',
             'subtitle' => 'Your go-to place for amazing content',
-            'featuredPosts' => [
-                ['id' => 1, 'title' => 'Post 1', 'excerpt' => 'This is the first post.'],
-                ['id' => 2, 'title' => 'Post 2', 'excerpt' => 'This is the second post.'],
-                ['id' => 3, 'title' => 'Post 3', 'excerpt' => 'This is the third post.'],
-            ],
+            'trendingTags' => $trendingTags,
+            'latestPosts' => $latestPosts,
             'user' => auth()->user() ? auth()->user()->only(['name', 'email']) : null,
         ];
 
         return Inertia::render('Home', $viewData);
-
     }
-
-    // About Us Page
 
     /**
-     * @return \Inertia\Response
+     * Handle search for tags and article content.
+     *
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function about()
-    // renders the about us page
+    public function search(Request $request)
     {
-        return Inertia::render(
-            'AboutUs',
-            [
-                'title' => 'About Us - Not Another Blog Site',
-                'subtitle' => 'Subtitle Here',
-                'author' => 'AJ Javadi',
-                'description' => str_repeat('word', 150),
-                'description_length' => strlen('description'),
+        $query = $request->input('query');
 
-            ],
-        );
+        // Search posts by title or content
+        $posts = BlogPost::where('title', 'like', "%$query%")
+            ->orWhere('content', 'like', "%$query%")
+            ->with(['tags', 'user'])
+            ->get();
+
+        // Search tags by name
+        $tags = Tag::where('name', 'like', "%$query%")
+            ->get();
+
+        return response()->json([
+            'blogposts' => $posts,
+            'tags' => $tags,
+        ]);
     }
-
-    public function search() {}
 }

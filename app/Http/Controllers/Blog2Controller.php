@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blogposts;
+use App\Models\Blogpost;
 use Illuminate\Http\Request;
 
 class Blog2 extends Controller
@@ -34,7 +34,7 @@ class Blog2 extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Blogposts $blogposts)
+    public function show(Blogpost $blogposts)
     {
         //
     }
@@ -42,7 +42,7 @@ class Blog2 extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Blogposts $blogposts)
+    public function edit(Blogpost $blogposts)
     {
         //
     }
@@ -50,7 +50,7 @@ class Blog2 extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Blogposts $blogposts)
+    public function update(Request $request, Blogpost $blogposts)
     {
         //
     }
@@ -58,7 +58,7 @@ class Blog2 extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Blogposts $blogposts)
+    public function destroy(Blogpost $blogposts)
     {
         //
     }

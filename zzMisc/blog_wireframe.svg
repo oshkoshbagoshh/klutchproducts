@@ -13,7 +13,7 @@
     <rect x="460" y="180" width="800" height="20" fill="#aaa" />
     <rect x="460" y="220" width="400" height="20" fill="#aaa" />
 
-    <!-- Blog Grid -->
+    <!-- zzBlog Grid -->
     <rect x="120" y="350" width="1200" height="600" fill="#f0f0f0" />
     <rect x="140" y="370" width="350" height="250" fill="#ccc" />
     <rect x="140" y="640" width="350" height="50" fill="#aaa" />

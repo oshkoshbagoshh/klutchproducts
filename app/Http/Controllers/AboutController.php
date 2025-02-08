@@ -9,6 +9,12 @@ class AboutController extends Controller
     // Display the "About Us" Component
     public function index()
     {
-        return Inertia::render('AboutUs');
+        $viewData = [];
+        $viewData['title'] = 'About Us';
+        $viewData['subtitle'] = 'This is the about us page';
+        $viewData['description'] = 'This is the description.This is the description.This is the description.This is the description.';
+        $viewData['author'] = 'Scrooge Mcduck';
+
+        return Inertia::render('AboutUs')->with($viewData);
     }
 }
