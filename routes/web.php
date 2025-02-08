@@ -9,6 +9,7 @@
  * @Description: file:///Users/aj/Herd/klutch_products/routes/web.php
  */
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
@@ -31,10 +32,10 @@ use Inertia\Inertia;
 // Home Controller
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/about', [AboutController::class, 'index']);
 Route::get('/search', [HomeController::class, 'search'])->name(name: 'search');
 
-// Public Route: Blog Page
+// Public Route: zzBlog Page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 // Auth Routes (Jetstream)
