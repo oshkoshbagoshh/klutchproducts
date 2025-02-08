@@ -6,25 +6,47 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
+    /**
+     * @return \Inertia\Response
+     */
     public function index()
     {
-        // Pass data directly into the render method's second argument
-        return Inertia::render('Home', [
-            'title' => 'Home Page - Klutch Products',
-            'viewData' => [
-                'subtitle' => 'Your trusted source for unbiased product reviews.',
+        //        Dummy Data to pass into to the Home View
+        $viewData = [
+            'title' => 'Welcome to Not Another Blog Site',
+            'subtitle' => 'Your go-to place for amazing content',
+            'featuredPosts' => [
+                ['id' => 1, 'title' => 'Post 1', 'excerpt' => 'This is the first post.'],
+                ['id' => 2, 'title' => 'Post 2', 'excerpt' => 'This is the second post.'],
+                ['id' => 3, 'title' => 'Post 3', 'excerpt' => 'This is the third post.'],
             ],
-        ]);
+            'user' => auth()->user() ? auth()->user()->only(['name', 'email']) : null,
+        ];
+
+        return Inertia::render('Home', $viewData);
+
     }
 
+    // About Us Page
+
+    /**
+     * @return \Inertia\Response
+     */
     public function about()
+    // renders the about us page
     {
-        // Pass multiple properties in an array
-        return Inertia::render('AboutUs', [
-            'title' => 'About Us - Klutch Products',
-            'subtitle' => 'About Us',
-            'description' => 'This is the about us page...',
-            'author' => 'AJ Javadi',
-        ]);
+        return Inertia::render(
+            'AboutUs',
+            [
+                'title' => 'About Us - Not Another Blog Site',
+                'subtitle' => 'Subtitle Here',
+                'author' => 'AJ Javadi',
+                'description' => str_repeat('word', 150),
+                'description_length' => strlen('description'),
+
+            ],
+        );
     }
+
+    public function search() {}
 }

@@ -11,6 +11,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -27,8 +28,14 @@ use Inertia\Inertia;
 |--------------------------------------------------------------------------
 */
 
+// Home Controller
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/search', [HomeController::class, 'search'])->name(name: 'search');
+
 // Public Route: Blog Page
-Route::get('/', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 // Auth Routes (Jetstream)
 Route::middleware([
